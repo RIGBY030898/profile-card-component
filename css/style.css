@@ -2,4 +2,11 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 /*# sourceMappingURL=style.css.map */
