@@ -6,7 +6,21 @@ $dark-grayish-blue: hsl(227, 10%, 46%);
 // Neutral colors
 $dark-gray: hsl(0, 0%, 59%);
 
+// Divider color
+$divider-color: hsl(0%, 0%, 91%);
+
+// Phone screen
+$information-phone: "(max-width: 480px)";
+
+// Tablet screen
+$information-tablet: "(min-width: 480px) and (max-width: 728px)";
+
+// Desktop screen
+$information-desktop: "(min-width: 728px)";
+
 body {
+    background-color: $dark-cyan;
+    box-sizing: border-box;
     font-family: "Kumbh Sans", sans-serif;
     font-size: 18px;
 }
@@ -16,4 +30,94 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.card {
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: white;
+
+    @media #{$information-phone} {
+        height: 376px;
+        width: 330px;
+    }
+
+    @media #{$information-tablet} {
+        height: 378px;
+        width: 340px;
+    }
+
+    @media #{$information-desktop} {
+        height: 380px;
+        width: 350px;
+    }
+
+    &-header {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-img {
+            border: 6px solid white;
+            border-radius: 50%;
+            margin-top: -54px;
+        }
+
+        &-title {
+            color: $very-dark-desaturated-blue;
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 0px;
+            margin-top: 1.4em;
+
+            span {
+                margin-left: 4px;
+                color: $dark-grayish-blue;
+                font-weight: 400;
+            }
+        }
+
+        &-text {
+            color: $dark-grayish-blue;
+            font-size: 0.8em;
+            margin-bottom: 1.4em;
+            margin-top: 0.8em;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        margin-top: 0px;
+        border-top: 1px solid $divider-color;
+        justify-content: space-between;
+        padding: 0.8em 3em 0px 2.2em;
+
+        &-social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                color: $very-dark-desaturated-blue;
+                font-size: 1em;
+                font-weight: 700;
+                margin-bottom: 0px;
+            }
+            p {
+                color: $dark-gray;
+                font-size: 0.6em;
+                font-weight: 400;
+                letter-spacing: 2px;
+                margin-top: 0.6em;
+                margin-bottom: 0px;
+            }
+        }
+    }
 }
