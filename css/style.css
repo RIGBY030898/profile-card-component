@@ -1,8 +1,28 @@
 body {
   background-color: #19a2ae;
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-position: right 40vw bottom 40vh, left 40vw top 40vh;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 728px) {
+  body {
+    background-position: right 44vw bottom 44vh, left 44vw top 44vh;
+  }
+}
+
+@media (min-width: 728px) {
+  body {
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  }
 }
 
 .flex {
